@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-02-09",
+            "open": "37.67000",
+            "high": "38.1",
+            "low": "37.16500",
+            "close": "38.055000",
+            "volume": "3220159"
+        },
+        {
             "datetime": "2026-02-06",
             "open": "36.23000",
             "high": "37.70000",
@@ -8000,25 +8008,17 @@
             "low": "44.34000",
             "close": "44.65000",
             "volume": "5067400"
-        },
-        {
-            "datetime": "2022-02-11",
-            "open": "47.20000",
-            "high": "47.95000",
-            "low": "45.18000",
-            "close": "45.46000",
-            "volume": "7871500"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 37.49,
-        "50_week_moving_average": 35.54,
-        "50_week_moving_average_slope": 6.407,
-        "50_week_ema": 41.75,
-        "200_week_moving_average": 38.03,
-        "200_week_moving_average_slope": 0.9222,
-        "200_week_ema": 34.8,
+        "current_price": 38.055,
+        "50_week_moving_average": 35.62,
+        "50_week_moving_average_slope": 6.2265,
+        "50_week_ema": 41.67,
+        "200_week_moving_average": 38.02,
+        "200_week_moving_average_slope": 0.8378,
+        "200_week_ema": 34.78,
         "fibonacci_levels": {
             "0.0%": 51.35,
             "23.6%": 45.2,
@@ -8032,16 +8032,16 @@
             "200.0%": -0.75,
             "261.8%": -16.85
         },
-        "rsi": 60.53,
+        "rsi": 57.99,
         "macd": {
             "macd_line": 1.91,
-            "signal_line": 0.46,
-            "histogram": 1.45
+            "signal_line": 0.12,
+            "histogram": 1.79
         },
         "bollinger_bands": {
-            "middle_band": 42.66,
-            "upper_band": 47.27,
-            "lower_band": 38.05
+            "middle_band": 42.33,
+            "upper_band": 47.05,
+            "lower_band": 37.61
         },
         "isInteresting": true
     }

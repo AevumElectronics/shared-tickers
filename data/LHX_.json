@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-02-09",
+            "open": "349.66000",
+            "high": "352",
+            "low": "347.5",
+            "close": "350.59000",
+            "volume": "589550"
+        },
+        {
             "datetime": "2026-02-06",
             "open": "346.89999",
             "high": "349.79001",
@@ -8000,25 +8008,17 @@
             "low": "217.67999",
             "close": "219.82001",
             "volume": "1239400"
-        },
-        {
-            "datetime": "2022-02-11",
-            "open": "215.22000",
-            "high": "223.36000",
-            "low": "214.53000",
-            "close": "222.97000",
-            "volume": "1576100"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 349.66,
-        "50_week_moving_average": 312.79,
-        "50_week_moving_average_slope": -65.024,
+        "current_price": 350.59,
+        "50_week_moving_average": 314.28,
+        "50_week_moving_average_slope": -66.1616,
         "50_week_ema": 249.96,
-        "200_week_moving_average": 228.06,
-        "200_week_moving_average_slope": -41.257,
-        "200_week_ema": 234.89,
+        "200_week_moving_average": 228.18,
+        "200_week_moving_average_slope": -41.9152,
+        "200_week_ema": 234.85,
         "fibonacci_levels": {
             "0.0%": 369.59,
             "23.6%": 320.19,
@@ -8032,16 +8032,16 @@
             "200.0%": -49.09,
             "261.8%": -178.46
         },
-        "rsi": 38.2,
+        "rsi": 35.01,
         "macd": {
-            "macd_line": -15.23,
-            "signal_line": -2.96,
-            "histogram": -12.27
+            "macd_line": -12.73,
+            "signal_line": -1.32,
+            "histogram": -11.41
         },
         "bollinger_bands": {
-            "middle_band": 239.64,
-            "upper_band": 277.29,
-            "lower_band": 201.99
+            "middle_band": 240.99,
+            "upper_band": 278.09,
+            "lower_band": 203.89
         },
         "isInteresting": true
     }

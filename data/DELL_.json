@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-02-09",
+            "open": "120.30000",
+            "high": "122",
+            "low": "117.85960",
+            "close": "120.91000",
+            "volume": "3868624"
+        },
+        {
             "datetime": "2026-02-06",
             "open": "116.90000",
             "high": "122.57000",
@@ -8000,25 +8008,17 @@
             "low": "58.23000",
             "close": "58.60000",
             "volume": "2902500"
-        },
-        {
-            "datetime": "2022-02-11",
-            "open": "60.75",
-            "high": "61.30000",
-            "low": "59.35000",
-            "close": "59.51000",
-            "volume": "2449800"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 121.050003,
-        "50_week_moving_average": 125.22,
-        "50_week_moving_average_slope": -73.353,
-        "50_week_ema": 50.98,
-        "200_week_moving_average": 86.09,
-        "200_week_moving_average_slope": -81.9749,
-        "200_week_ema": 43.58,
+        "current_price": 120.91,
+        "50_week_moving_average": 125.12,
+        "50_week_moving_average_slope": -73.5128,
+        "50_week_ema": 50.74,
+        "200_week_moving_average": 86.15,
+        "200_week_moving_average_slope": -82.2136,
+        "200_week_ema": 43.53,
         "fibonacci_levels": {
             "0.0%": 179.7,
             "23.6%": 145.06,
@@ -8032,16 +8032,16 @@
             "200.0%": -113.9,
             "261.8%": -204.62
         },
-        "rsi": 65.87,
+        "rsi": 63.82,
         "macd": {
-            "macd_line": 2.35,
-            "signal_line": 0.27,
-            "histogram": 2.08
+            "macd_line": 2.08,
+            "signal_line": -0.03,
+            "histogram": 2.11
         },
         "bollinger_bands": {
-            "middle_band": 54.61,
-            "upper_band": 62.06,
-            "lower_band": 47.16
+            "middle_band": 54.17,
+            "upper_band": 61.44,
+            "lower_band": 46.9
         },
         "isInteresting": true
     }
