@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-02-17",
+            "open": "65.33000",
+            "high": "66.80000",
+            "low": "65.28000",
+            "close": "66.43000",
+            "volume": "4205694"
+        },
+        {
             "datetime": "2026-02-13",
             "open": "64.97000",
             "high": "65.93000",
@@ -8000,25 +8008,17 @@
             "low": "43.71000",
             "close": "45.29000",
             "volume": "7327500"
-        },
-        {
-            "datetime": "2022-02-18",
-            "open": "44.74000",
-            "high": "44.88000",
-            "low": "43.96000",
-            "close": "44.080002",
-            "volume": "4938700"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 65.4,
-        "50_week_moving_average": 56.6,
-        "50_week_moving_average_slope": -12.5372,
-        "50_week_ema": 43.61,
-        "200_week_moving_average": 55.57,
-        "200_week_moving_average_slope": -23.0584,
-        "200_week_ema": 40.09,
+        "current_price": 66.43,
+        "50_week_moving_average": 56.84,
+        "50_week_moving_average_slope": -12.8874,
+        "50_week_ema": 43.43,
+        "200_week_moving_average": 55.6,
+        "200_week_moving_average_slope": -23.0831,
+        "200_week_ema": 40.1,
         "fibonacci_levels": {
             "0.0%": 83.32,
             "23.6%": 71.47,
@@ -8032,16 +8032,16 @@
             "200.0%": -17.12,
             "261.8%": -48.16
         },
-        "rsi": 47.67,
+        "rsi": 52.98,
         "macd": {
-            "macd_line": -1.05,
-            "signal_line": -1.22,
-            "histogram": 0.17
+            "macd_line": -1.2,
+            "signal_line": -1.02,
+            "histogram": -0.18
         },
         "bollinger_bands": {
-            "middle_band": 44.81,
-            "upper_band": 47.39,
-            "lower_band": 42.23
+            "middle_band": 44.98,
+            "upper_band": 47.78,
+            "lower_band": 42.18
         },
         "isInteresting": true
     }

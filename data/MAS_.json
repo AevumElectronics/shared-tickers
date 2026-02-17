@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-02-17",
+            "open": "76.25",
+            "high": "76.84500",
+            "low": "75.040001",
+            "close": "76.17000",
+            "volume": "2067321"
+        },
+        {
             "datetime": "2026-02-13",
             "open": "75.72000",
             "high": "76.63000",
@@ -8000,25 +8008,17 @@
             "low": "55.43000",
             "close": "55.91000",
             "volume": "2305000"
-        },
-        {
-            "datetime": "2022-02-18",
-            "open": "57.85000",
-            "high": "58.27000",
-            "low": "57.16000",
-            "close": "57.56000",
-            "volume": "2174300"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 76.19,
-        "50_week_moving_average": 67.39,
-        "50_week_moving_average_slope": -14.0346,
-        "50_week_ema": 52.96,
-        "200_week_moving_average": 62.91,
-        "200_week_moving_average_slope": -15.1951,
-        "200_week_ema": 51.22,
+        "current_price": 76.17,
+        "50_week_moving_average": 67.62,
+        "50_week_moving_average_slope": -14.339,
+        "50_week_ema": 52.94,
+        "200_week_moving_average": 62.93,
+        "200_week_moving_average_slope": -15.3186,
+        "200_week_ema": 51.18,
         "fibonacci_levels": {
             "0.0%": 86.7,
             "23.6%": 76.23,
@@ -8032,16 +8032,16 @@
             "200.0%": -2.04,
             "261.8%": -29.46
         },
-        "rsi": 60.66,
+        "rsi": 55.44,
         "macd": {
-            "macd_line": 0.12,
-            "signal_line": 0.68,
-            "histogram": -0.56
+            "macd_line": -0.04,
+            "signal_line": 0.96,
+            "histogram": -1.0
         },
         "bollinger_bands": {
-            "middle_band": 55.21,
-            "upper_band": 58.18,
-            "lower_band": 52.24
+            "middle_band": 55.13,
+            "upper_band": 57.92,
+            "lower_band": 52.34
         },
         "isInteresting": true
     }

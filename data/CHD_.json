@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-02-17",
+            "open": "101.60000",
+            "high": "102.47000",
+            "low": "99.58000",
+            "close": "99.89000",
+            "volume": "1099982"
+        },
+        {
             "datetime": "2026-02-13",
             "open": "100.19000",
             "high": "101.82000",
@@ -8000,25 +8008,17 @@
             "low": "96.35000",
             "close": "96.72000",
             "volume": "1667500"
-        },
-        {
-            "datetime": "2022-02-18",
-            "open": "96.95000",
-            "high": "98.98000",
-            "low": "96.47000",
-            "close": "98.78000",
-            "volume": "2724300"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 101.45,
-        "50_week_moving_average": 89.45,
-        "50_week_moving_average_slope": 10.1024,
-        "50_week_ema": 100.07,
-        "200_week_moving_average": 94.72,
-        "200_week_moving_average_slope": -3.5162,
-        "200_week_ema": 85.41,
+        "current_price": 99.89,
+        "50_week_moving_average": 89.77,
+        "50_week_moving_average_slope": 9.7204,
+        "50_week_ema": 99.94,
+        "200_week_moving_average": 94.73,
+        "200_week_moving_average_slope": -3.6106,
+        "200_week_ema": 85.34,
         "fibonacci_levels": {
             "0.0%": 116.46,
             "23.6%": 105.53,
@@ -8032,16 +8032,16 @@
             "200.0%": 23.86,
             "261.8%": -4.75
         },
-        "rsi": 52.41,
+        "rsi": 46.84,
         "macd": {
-            "macd_line": 0.47,
-            "signal_line": -0.81,
-            "histogram": 1.28
+            "macd_line": 0.2,
+            "signal_line": -1.09,
+            "histogram": 1.29
         },
         "bollinger_bands": {
-            "middle_band": 97.46,
-            "upper_band": 100.89,
-            "lower_band": 94.03
+            "middle_band": 97.4,
+            "upper_band": 100.78,
+            "lower_band": 94.02
         },
         "isInteresting": true
     }
