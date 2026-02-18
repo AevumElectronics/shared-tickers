@@ -10,12 +10,20 @@
     },
     "values": [
         {
+            "datetime": "2026-02-18",
+            "open": "368.019989",
+            "high": "380.85999",
+            "low": "368.019989",
+            "close": "378.079987",
+            "volume": "409904"
+        },
+        {
             "datetime": "2026-02-17",
             "open": "374.049988",
-            "high": "375.375",
-            "low": "364.82001",
+            "high": "375.5",
+            "low": "364.5",
             "close": "370.5",
-            "volume": "409130"
+            "volume": "681000"
         },
         {
             "datetime": "2026-02-13",
@@ -8000,48 +8008,40 @@
             "low": "128.20000",
             "close": "129.10001",
             "volume": "1396612"
-        },
-        {
-            "datetime": "2022-02-22",
-            "open": "126.11000",
-            "high": "135.99001",
-            "low": "125.40000",
-            "close": "129.63000",
-            "volume": "4037765"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 370.5,
-        "50_week_moving_average": 360.99,
-        "50_week_moving_average_slope": -247.2054,
-        "50_week_ema": 112.26,
-        "200_week_moving_average": 179.74,
-        "200_week_moving_average_slope": -214.5078,
-        "200_week_ema": 99.08,
+        "current_price": 378.079987,
+        "50_week_moving_average": 361.41,
+        "50_week_moving_average_slope": -248.0686,
+        "50_week_ema": 111.91,
+        "200_week_moving_average": 179.98,
+        "200_week_moving_average_slope": -215.3749,
+        "200_week_ema": 99.07,
         "fibonacci_levels": {
-            "0.0%": 380.0,
-            "23.6%": 309.73,
-            "38.2%": 266.25,
-            "50.0%": 231.12,
-            "61.8%": 195.98,
+            "0.0%": 380.86,
+            "23.6%": 310.38,
+            "38.2%": 266.78,
+            "50.0%": 231.55,
+            "61.8%": 196.31,
             "100.0%": 82.23,
-            "123.6%": 11.96,
-            "138.2%": -31.52,
-            "161.8%": -101.79,
-            "200.0%": -215.54,
-            "261.8%": -399.56
+            "123.6%": 11.75,
+            "138.2%": -31.85,
+            "161.8%": -102.32,
+            "200.0%": -216.4,
+            "261.8%": -400.95
         },
-        "rsi": 62.02,
+        "rsi": 61.6,
         "macd": {
-            "macd_line": 1.06,
-            "signal_line": -1.9,
-            "histogram": 2.96
+            "macd_line": -0.54,
+            "signal_line": -1.62,
+            "histogram": 1.08
         },
         "bollinger_bands": {
-            "middle_band": 118.22,
-            "upper_band": 138.7,
-            "lower_band": 97.74
+            "middle_band": 117.61,
+            "upper_band": 137.41,
+            "lower_band": 97.81
         },
         "isInteresting": true
     }
