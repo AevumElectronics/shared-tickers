@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-02-23",
+            "open": "31.51000",
+            "high": "31.70000",
+            "low": "30.625",
+            "close": "30.75",
+            "volume": "3911831"
+        },
+        {
             "datetime": "2026-02-20",
             "open": "31.75",
             "high": "31.80000",
@@ -8000,25 +8008,17 @@
             "low": "22.58000",
             "close": "23.33000",
             "volume": "14810000"
-        },
-        {
-            "datetime": "2022-02-25",
-            "open": "22.25",
-            "high": "22.94000",
-            "low": "22.010000",
-            "close": "22.71000",
-            "volume": "9155500"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 31.28,
-        "50_week_moving_average": 27.46,
-        "50_week_moving_average_slope": -0.0436,
-        "50_week_ema": 28.04,
-        "200_week_moving_average": 26.4,
-        "200_week_moving_average_slope": 3.3783,
-        "200_week_ema": 28.72,
+        "current_price": 30.75,
+        "50_week_moving_average": 27.53,
+        "50_week_moving_average_slope": 0.0108,
+        "50_week_ema": 28.14,
+        "200_week_moving_average": 26.41,
+        "200_week_moving_average_slope": 3.3499,
+        "200_week_ema": 28.71,
         "fibonacci_levels": {
             "0.0%": 36.55,
             "23.6%": 33.11,
@@ -8032,16 +8032,16 @@
             "200.0%": 7.41,
             "261.8%": -1.59
         },
-        "rsi": 34.32,
+        "rsi": 36.48,
         "macd": {
-            "macd_line": -0.75,
-            "signal_line": -1.39,
-            "histogram": 0.64
+            "macd_line": -0.98,
+            "signal_line": -1.41,
+            "histogram": 0.43
         },
         "bollinger_bands": {
-            "middle_band": 25.09,
-            "upper_band": 27.62,
-            "lower_band": 22.56
+            "middle_band": 25.4,
+            "upper_band": 28.19,
+            "lower_band": 22.61
         },
         "isInteresting": true
     }

@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-02-23",
+            "open": "64.25",
+            "high": "64.53500",
+            "low": "60.89000",
+            "close": "61.13000",
+            "volume": "9948914"
+        },
+        {
             "datetime": "2026-02-20",
             "open": "65.089996",
             "high": "66.089996",
@@ -8000,25 +8008,17 @@
             "low": "84.98000",
             "close": "86.13000",
             "volume": "3835600"
-        },
-        {
-            "datetime": "2022-02-25",
-            "open": "86.29000",
-            "high": "88.080002",
-            "low": "85.95000",
-            "close": "88.040001",
-            "volume": "2892500"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 65.029999,
-        "50_week_moving_average": 80.6,
-        "50_week_moving_average_slope": 6.2906,
-        "50_week_ema": 86.07,
-        "200_week_moving_average": 71.73,
-        "200_week_moving_average_slope": -5.2595,
-        "200_week_ema": 67.61,
+        "current_price": 61.13,
+        "50_week_moving_average": 80.21,
+        "50_week_moving_average_slope": 6.4516,
+        "50_week_ema": 85.74,
+        "200_week_moving_average": 71.7,
+        "200_week_moving_average_slope": -5.322,
+        "200_week_ema": 67.48,
         "fibonacci_levels": {
             "0.0%": 93.47,
             "23.6%": 83.52,
@@ -8032,16 +8032,16 @@
             "200.0%": 9.19,
             "261.8%": -16.85
         },
-        "rsi": 50.99,
+        "rsi": 43.88,
         "macd": {
             "macd_line": -2.26,
-            "signal_line": -0.37,
-            "histogram": -1.89
+            "signal_line": 0.09,
+            "histogram": -2.35
         },
         "bollinger_bands": {
-            "middle_band": 88.85,
-            "upper_band": 92.79,
-            "lower_band": 84.91
+            "middle_band": 89.02,
+            "upper_band": 93.1,
+            "lower_band": 84.94
         },
         "isInteresting": true
     }

@@ -10,6 +10,14 @@
     },
     "values": [
         {
+            "datetime": "2026-02-23",
+            "open": "30.15000",
+            "high": "30.46000",
+            "low": "30.010000",
+            "close": "30.22000",
+            "volume": "8686665"
+        },
+        {
             "datetime": "2026-02-20",
             "open": "29.95000",
             "high": "30.15500",
@@ -8000,25 +8008,17 @@
             "low": "27.51500",
             "close": "27.96000",
             "volume": "13127000"
-        },
-        {
-            "datetime": "2022-02-25",
-            "open": "27.66000",
-            "high": "28.080000",
-            "low": "27.36500",
-            "close": "28.070000",
-            "volume": "7524300"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 30.09,
-        "50_week_moving_average": 28.42,
-        "50_week_moving_average_slope": 0.042,
-        "50_week_ema": 28.72,
-        "200_week_moving_average": 30.99,
-        "200_week_moving_average_slope": -0.0103,
-        "200_week_ema": 31.39,
+        "current_price": 30.22,
+        "50_week_moving_average": 28.47,
+        "50_week_moving_average_slope": -0.0234,
+        "50_week_ema": 28.68,
+        "200_week_moving_average": 31.0,
+        "200_week_moving_average_slope": 0.0263,
+        "200_week_ema": 31.42,
         "fibonacci_levels": {
             "0.0%": 35.69,
             "23.6%": 33.5,
@@ -8032,16 +8032,16 @@
             "200.0%": 17.15,
             "261.8%": 11.42
         },
-        "rsi": 51.61,
+        "rsi": 50.67,
         "macd": {
-            "macd_line": -0.28,
-            "signal_line": -0.57,
-            "histogram": 0.29
+            "macd_line": -0.4,
+            "signal_line": -0.63,
+            "histogram": 0.23
         },
         "bollinger_bands": {
-            "middle_band": 27.5,
-            "upper_band": 28.63,
-            "lower_band": 26.37
+            "middle_band": 27.46,
+            "upper_band": 28.56,
+            "lower_band": 26.36
         },
         "isInteresting": true
     }
