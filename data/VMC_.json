@@ -10,12 +10,20 @@
     },
     "values": [
         {
+            "datetime": "2026-02-25",
+            "open": "318.60001",
+            "high": "319.3",
+            "low": "305.27499",
+            "close": "305.57001",
+            "volume": "1132556"
+        },
+        {
             "datetime": "2026-02-24",
             "open": "311.81000",
             "high": "318.10001",
             "low": "309.51999",
             "close": "317.89001",
-            "volume": "1347513"
+            "volume": "1347600"
         },
         {
             "datetime": "2026-02-23",
@@ -8000,25 +8008,17 @@
             "low": "174.53000",
             "close": "178.25",
             "volume": "946300"
-        },
-        {
-            "datetime": "2022-03-01",
-            "open": "180.39000",
-            "high": "181",
-            "low": "172.89999",
-            "close": "174.44000",
-            "volume": "810800"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 317.89001,
-        "50_week_moving_average": 302.65,
-        "50_week_moving_average_slope": -124.936,
-        "50_week_ema": 177.04,
-        "200_week_moving_average": 229.07,
-        "200_week_moving_average_slope": -120.5916,
-        "200_week_ema": 167.04,
+        "current_price": 305.57001,
+        "50_week_moving_average": 302.78,
+        "50_week_moving_average_slope": -125.3888,
+        "50_week_ema": 176.47,
+        "200_week_moving_average": 229.2,
+        "200_week_moving_average_slope": -120.7265,
+        "200_week_ema": 167.16,
         "fibonacci_levels": {
             "0.0%": 331.09,
             "23.6%": 285.41,
@@ -8032,16 +8032,16 @@
             "200.0%": -56.01,
             "261.8%": -175.62
         },
-        "rsi": 45.19,
+        "rsi": 50.58,
         "macd": {
-            "macd_line": -4.52,
-            "signal_line": -0.83,
-            "histogram": -3.69
+            "macd_line": -3.61,
+            "signal_line": 0.13,
+            "histogram": -3.74
         },
         "bollinger_bands": {
-            "middle_band": 178.9,
-            "upper_band": 187.64,
-            "lower_band": 170.16
+            "middle_band": 179.75,
+            "upper_band": 189.77,
+            "lower_band": 169.73
         },
         "isInteresting": true
     }
