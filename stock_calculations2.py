@@ -1,5 +1,5 @@
 import numpy as np  # Kept as in original, even if not used
-
+from datetime import datetime, timezone
 from formulas.moving_average import calculate_moving_average
 from formulas.slope import calculate_slope
 from formulas.fibonacci_levels import calculate_fibonacci_levels
@@ -39,7 +39,8 @@ def perform_calculations(data):
             'macd': calculate_macd(data),
             'bollinger_bands': calculate_bollinger_bands(data, 20, 2), 
             #'pivot_points': calculate_pivot_points(data),
-            'isInteresting': is_interesting
+            'isInteresting': is_interesting,
+            'timestamp': datetime.now(timezone.utc).isoformat()
         }
     except Exception as e:
         print(f"Error in perform_calculations: {e}")
