@@ -2,134 +2,138 @@ import requests
 import os
 import json
 import time
-from stock_calculations2 import perform_calculations  # Import the external function
+from stock_calculations2 import perform_calculations  # tieni il tuo modulo
 
+# ────────────────────────────────────────────────
+# Configurazioni
+# ────────────────────────────────────────────────
+API_KEY = os.environ.get("TWELVE_DATA_API_KEY")
+if not API_KEY:
+    print("ERRORE: TWELVE_DATA_API_KEY non trovata nelle variabili d'ambiente")
+    exit(1)
 
-# Configurazione
-API_KEY = '320466b042c54d53b58a1fcdb929a2f8'  # Inserisci qui la tua chiave API Twelve Data
-OUTPUT_DIR = 'data'  # Cartella dove verranno salvati i JSON
-INPUT_FILE = 'customSEP500.json'  # File JSON contenente i simboli e gli exchange
+PROJECT_ID = os.environ.get("FIREBASE_PROJECT_ID")
+if not PROJECT_ID:
+    print("ERRORE: FIREBASE_PROJECT_ID non trovato nelle variabili d'ambiente")
+    exit(1)
 
-# Crea la cartella di output se non esiste
+OUTPUT_DIR = 'data'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-def carica_titoli(file):
-    """Carica i dati dei titoli da un file JSON."""
+CALCULATED_FILE = 'calculatedData.json'
+
+# ────────────────────────────────────────────────
+# Legge i ticker da Firestore via REST (sola lettura pubblica)
+# ────────────────────────────────────────────────
+def get_tickers_from_firestore():
+    url = f"https://firestore.googleapis.com/v1/projects/{PROJECT_ID}/databases/(default)/documents/tickers_global/global"
+
     try:
-        with open(file, 'r') as f:
-            titoli = json.load(f)
-        return titoli
-    except FileNotFoundError:
-        print(f"Errore: File {file} non trovato.")
-        return []
-    except json.JSONDecodeError as e:
-        print(f"Errore nel decodificare il file JSON: {e}")
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        data = response.json()
+
+        fields = data.get("fields", {})
+        set_map = fields.get("set", {}).get("mapValue", {}).get("fields", {})
+
+        tickers = []
+        for key, value in set_map.items():
+            if value.get("booleanValue") is True:
+                tickers.append(key)
+
+        print(f"Trovati {len(tickers)} ticker attivi")
+        if tickers:
+            print("Primi 5:", ", ".join(tickers[:5]))
+        return tickers
+
+    except Exception as e:
+        print(f"Errore nella lettura di Firestore: {e}")
         return []
 
-def recupera_dati_titolo(symbol, exchange):
-    """Recupera i dati a intervallo di 1 giorno per il simbolo e l'exchange specificati."""
-    url = f'https://api.twelvedata.com/time_series'
+# ────────────────────────────────────────────────
+# Recupera dati da Twelve Data
+# ────────────────────────────────────────────────
+def recupera_dati_titolo(symbol):
+    url = "https://api.twelvedata.com/time_series"
     params = {
-        'symbol': symbol,
-        'exchange': exchange,
-        'interval': '1day',
-        'apikey': API_KEY,
-        'outputsize': 1000  # Recupera fino a 1000 giorni di dati
+        "symbol": symbol,
+        "interval": "1day",
+        "apikey": API_KEY,
+        "outputsize": 1000
     }
 
-    response = requests.get(url, params=params)
-    if response.status_code != 200:
-        print(f"Errore nel recupero dei dati per {symbol} su {exchange}: {response.status_code}")
-        return None
-
-    data = response.json()
-    if 'values' not in data:
-        print(f"Nessun dato trovato per {symbol} su {exchange}: {data}")
-        return None
-
-    return data
-
-def salva_dati_json2(data, filename):
-    """Salva i dati in un file JSON."""
-    if data is None:
-        print(f"Nessun dato da salvare in {filename}")
-        return
-
-    # Aggiungi i calcoli al dizionario dei dati
-    data['calculated'] = perform_calculations(data)
-
-    # Salva i dati JSON direttamente nel file
-    with open(filename, 'w') as f:
-        json.dump(data, f, indent=4)
-    print(f"Dati salvati in {filename}")
-
-def salva_dati_json(data, filename):
-    """Salva i dati in un file JSON e aggiorna calculatedData.json con i calcoli."""
-    if data is None:
-        print(f"Nessun dato da salvare in {filename}")
-        return
-
-    # Aggiungi i calcoli al dizionario dei dati
-    calculated = perform_calculations(data)
-    data['calculated'] = calculated
-
-    # Salva i dati JSON direttamente nel file specifico per il titolo
-    with open(filename, 'w') as f:
-        json.dump(data, f, indent=4)
-    print(f"Dati salvati in {filename}")
-
-    # Salva i calcoli in calculatedData.json (crea il file se non esiste)
-    symbol = os.path.basename(filename).split('_')[0]  # Estrai il simbolo dal nome del file
-    calculated_file = 'calculatedData.json'
-    
-    # Carica il file calculatedData.json se esiste, altrimenti crea un dizionario vuoto
-    calculated_data = {}
     try:
-        with open(calculated_file, 'r') as f:
-            calculated_data = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        pass  # File non esiste o non valido, inizia con un dizionario vuoto
+        response = requests.get(url, params=params, timeout=15)
+        response.raise_for_status()
+        data = response.json()
 
-    # Aggiungi o aggiorna i calcoli per il simbolo corrente
-    calculated_data[symbol] = calculated
+        if "values" not in data:
+            print(f"Nessun dato valido per {symbol}: {data.get('message', 'nessun messaggio')}")
+            return None
 
-    # Salva il file calculatedData.json
-    with open(calculated_file, 'w') as f:
-        json.dump(calculated_data, f, indent=4)
-    print(f"Dati calcolati per {symbol} salvati in {calculated_file}")
+        return data
 
-def main():
-    # Carica i titoli dal file JSON
-    titoli = carica_titoli(INPUT_FILE)
+    except Exception as e:
+        print(f"Errore API Twelve Data per {symbol}: {e}")
+        return None
 
-    if not titoli:
-        print("Nessun titolo da elaborare.")
+# ────────────────────────────────────────────────
+# Salva i dati e aggiorna calculatedData.json
+# ────────────────────────────────────────────────
+def salva_dati(symbol, raw_data):
+    if not raw_data:
         return
 
-    request_count = 0  # Contatore delle richieste API
+    calculated = perform_calculations(raw_data)
+    raw_data['calculated'] = calculated
 
-    for i, titolo in enumerate(titoli):
-        symbol = titolo.get('Symbol')
-        exchange = ''
+    # File per simbolo
+    filename = os.path.join(OUTPUT_DIR, f"{symbol}.json")
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(raw_data, f, indent=4, ensure_ascii=False)
+    print(f"Salvato: {filename}")
 
-        if not symbol:
-            print(f"Titolo non valido: {titolo}")
-            continue
+    # Aggiorna calculatedData.json
+    calc_data = {}
+    try:
+        with open(CALCULATED_FILE, "r", encoding="utf-8") as f:
+            calc_data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        pass
 
-        print(f"Recupero dei dati per il simbolo {symbol} su {exchange}...")
-        dati = recupera_dati_titolo(symbol, exchange)
+    calc_data[symbol] = calculated
+
+    with open(CALCULATED_FILE, "w", encoding="utf-8") as f:
+        json.dump(calc_data, f, indent=4, ensure_ascii=False)
+    print(f"Calcoli aggiornati per {symbol} in {CALCULATED_FILE}")
+
+# ────────────────────────────────────────────────
+# Main
+# ────────────────────────────────────────────────
+def main():
+    tickers = get_tickers_from_firestore()
+    if not tickers:
+        print("Nessun ticker da elaborare. Fine.")
+        return
+
+    request_count = 0
+
+    for i, symbol in enumerate(tickers):
+        print(f"[{i+1:3d}/{len(tickers)}] {symbol}")
+        dati = recupera_dati_titolo(symbol)
 
         if dati:
-            filename = os.path.join(OUTPUT_DIR, f'{symbol}_{exchange}.json')
-            salva_dati_json(dati, filename)
+            salva_dati(symbol, dati)
 
         request_count += 1
 
-        # Attendi se sono state effettuate 8 richieste
-        if request_count == 8 and i < len(titoli) - 1:  # Evita l'attesa dopo l'ultima richiesta
-            print("Raggiunto il limite di 8 richieste. Attesa di 70 secondi...")
-            time.sleep(70)  # Attendi 1 minuto e 10 secondi
-            request_count = 0  # Resetta il contatore
+        # Rate limit Twelve Data (8 richieste → pausa)
+        if request_count >= 8 and i < len(tickers) - 1:
+            print("   → Limite rate: attesa 70 secondi...")
+            time.sleep(70)
+            request_count = 0
 
-if __name__ == '__main__':
+    print("Elaborazione completata.")
+
+if __name__ == "__main__":
     main()
