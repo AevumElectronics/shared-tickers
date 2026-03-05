@@ -10,12 +10,20 @@
     },
     "values": [
         {
+            "datetime": "2026-03-05",
+            "open": "6.90000",
+            "high": "6.90000",
+            "low": "6.32000",
+            "close": "6.46000",
+            "volume": "210568"
+        },
+        {
             "datetime": "2026-03-04",
             "open": "6.65000",
             "high": "6.87000",
-            "low": "6.46000",
+            "low": "6.45000",
             "close": "6.68000",
-            "volume": "490845"
+            "volume": "2327800"
         },
         {
             "datetime": "2026-03-03",
@@ -8000,24 +8008,16 @@
             "low": "0.29100001",
             "close": "0.29200000",
             "volume": "27600"
-        },
-        {
-            "datetime": "2022-03-09",
-            "open": "0.27300000",
-            "high": "0.30000001",
-            "low": "0.27300000",
-            "close": "0.29499999",
-            "volume": "37700"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 6.68,
-        "50_week_moving_average": 5.7,
-        "50_week_moving_average_slope": -5.3735,
+        "current_price": 6.46,
+        "50_week_moving_average": 5.74,
+        "50_week_moving_average_slope": -5.4154,
         "50_week_ema": 0.32,
-        "200_week_moving_average": 1.32,
-        "200_week_moving_average_slope": -3.454,
+        "200_week_moving_average": 1.33,
+        "200_week_moving_average_slope": -3.477,
         "200_week_ema": 0.31,
         "fibonacci_levels": {
             "0.0%": 6.99,
@@ -8032,11 +8032,11 @@
             "200.0%": -6.57,
             "261.8%": -10.76
         },
-        "rsi": 36.35,
+        "rsi": 34.78,
         "macd": {
-            "macd_line": -0.03,
-            "signal_line": -0.01,
-            "histogram": -0.02
+            "macd_line": -0.02,
+            "signal_line": null,
+            "histogram": null
         },
         "bollinger_bands": {
             "middle_band": 0.34,
@@ -8044,6 +8044,6 @@
             "lower_band": 0.27
         },
         "isInteresting": true,
-        "timestamp": "2026-03-04T21:58:36.066080+00:00"
+        "timestamp": "2026-03-05T22:00:56.629869+00:00"
     }
 }
