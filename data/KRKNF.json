@@ -10,20 +10,28 @@
     },
     "values": [
         {
+            "datetime": "2026-05-20",
+            "open": "5.35000",
+            "high": "5.78000",
+            "low": "5.30000",
+            "close": "5.73000",
+            "volume": "226629"
+        },
+        {
             "datetime": "2026-05-19",
             "open": "5.20000",
             "high": "5.59000",
             "low": "4.99000",
-            "close": "5.43000",
-            "volume": "282186"
+            "close": "5.38600",
+            "volume": "1087200"
         },
         {
             "datetime": "2026-05-18",
-            "open": "5.30000",
-            "high": "5.38000",
-            "low": "5.12000",
+            "open": "5.34000",
+            "high": "5.39000",
+            "low": "5.11000",
             "close": "5.16800",
-            "volume": "283609"
+            "volume": "900000"
         },
         {
             "datetime": "2026-05-15",
@@ -8000,24 +8008,16 @@
             "low": "0.25299999",
             "close": "0.25799999",
             "volume": "207600"
-        },
-        {
-            "datetime": "2022-05-24",
-            "open": "0.27500001",
-            "high": "0.27500001",
-            "low": "0.25799999",
-            "close": "0.25799999",
-            "volume": "266700"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 5.43,
-        "50_week_moving_average": 6.05,
-        "50_week_moving_average_slope": -5.8041,
+        "current_price": 5.73,
+        "50_week_moving_average": 6.02,
+        "50_week_moving_average_slope": -5.7664,
         "50_week_ema": 0.25,
         "200_week_moving_average": 1.63,
-        "200_week_moving_average_slope": -4.4505,
+        "200_week_moving_average_slope": -4.4657,
         "200_week_ema": 0.36,
         "fibonacci_levels": {
             "0.0%": 8.13,
@@ -8034,9 +8034,9 @@
         },
         "rsi": 49.86,
         "macd": {
-            "macd_line": 0.01,
+            "macd_line": 0.02,
             "signal_line": 0.02,
-            "histogram": -0.01
+            "histogram": 0.0
         },
         "bollinger_bands": {
             "middle_band": 0.26,
@@ -8044,6 +8044,6 @@
             "lower_band": 0.23
         },
         "isInteresting": true,
-        "timestamp": "2026-05-19T22:49:34.032937+00:00"
+        "timestamp": "2026-05-20T22:56:38.763154+00:00"
     }
 }
