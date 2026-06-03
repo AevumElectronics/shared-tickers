@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "symbol": "ASD",
+        "interval": "1day",
+        "currency": "USD",
+        "exchange_timezone": "America/New_York",
+        "exchange": "NASDAQ",
+        "mic_code": "XNMS",
+        "type": "ETF"
+    },
+    "values": [
+        {
+            "datetime": "2026-06-02",
+            "open": "24.66000",
+            "high": "24.74000",
+            "low": "24.61740",
+            "close": "24.61740",
+            "volume": "919"
+        },
+        {
+            "datetime": "2026-05-29",
+            "open": "25",
+            "high": "25",
+            "low": "25",
+            "close": "25",
+            "volume": "0"
+        }
+    ],
+    "status": "ok",
+    "calculated": {
+        "current_price": 24.6174,
+        "50_week_moving_average": null,
+        "50_week_moving_average_slope": null,
+        "50_week_ema": null,
+        "200_week_moving_average": null,
+        "200_week_moving_average_slope": null,
+        "200_week_ema": null,
+        "fibonacci_levels": {
+            "0.0%": 25.0,
+            "23.6%": 24.91,
+            "38.2%": 24.85,
+            "50.0%": 24.81,
+            "61.8%": 24.76,
+            "100.0%": 24.62,
+            "123.6%": 24.53,
+            "138.2%": 24.47,
+            "161.8%": 24.38,
+            "200.0%": 24.23,
+            "261.8%": 24.0
+        },
+        "rsi": null,
+        "macd": null,
+        "bollinger_bands": null,
+        "isInteresting": false,
+        "timestamp": "2026-06-03T23:20:41.194459+00:00"
+    }
+}
