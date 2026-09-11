@@ -10,12 +10,20 @@
     },
     "values": [
         {
+            "datetime": "2026-09-11",
+            "open": "3.55000",
+            "high": "3.60000",
+            "low": "3.31000",
+            "close": "3.31000",
+            "volume": "268484"
+        },
+        {
             "datetime": "2026-09-10",
-            "open": "3.59000",
-            "high": "3.63000",
-            "low": "3.52000",
-            "close": "3.53000",
-            "volume": "215839"
+            "open": "3.62000",
+            "high": "3.64000",
+            "low": "3.51800",
+            "close": "3.52000",
+            "volume": "712700"
         },
         {
             "datetime": "2026-09-09",
@@ -8000,24 +8008,16 @@
             "low": "0.34099999",
             "close": "0.34099999",
             "volume": "65600"
-        },
-        {
-            "datetime": "2022-09-15",
-            "open": "0.34000000",
-            "high": "0.34200001",
-            "low": "0.30399999",
-            "close": "0.34000000",
-            "volume": "236800"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 3.53,
-        "50_week_moving_average": 4.24,
-        "50_week_moving_average_slope": -3.9108,
+        "current_price": 3.31,
+        "50_week_moving_average": 4.21,
+        "50_week_moving_average_slope": -3.886,
         "50_week_ema": 0.33,
         "200_week_moving_average": 1.97,
-        "200_week_moving_average_slope": -4.8485,
+        "200_week_moving_average_slope": -4.8458,
         "200_week_ema": 0.4,
         "fibonacci_levels": {
             "0.0%": 8.13,
@@ -8032,11 +8032,11 @@
             "200.0%": -7.61,
             "261.8%": -12.48
         },
-        "rsi": 61.99,
+        "rsi": 62.53,
         "macd": {
-            "macd_line": 0.0,
+            "macd_line": -0.01,
             "signal_line": -0.02,
-            "histogram": 0.02
+            "histogram": 0.01
         },
         "bollinger_bands": {
             "middle_band": 0.3,
@@ -8044,6 +8044,6 @@
             "lower_band": 0.26
         },
         "isInteresting": true,
-        "timestamp": "2026-09-10T23:22:26.764002+00:00"
+        "timestamp": "2026-09-11T23:33:36.568281+00:00"
     }
 }
