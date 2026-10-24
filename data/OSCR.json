@@ -10,12 +10,20 @@
     },
     "values": [
         {
+            "datetime": "2026-10-23",
+            "open": "33",
+            "high": "33.16500",
+            "low": "30.68000",
+            "close": "30.99000",
+            "volume": "5147274"
+        },
+        {
             "datetime": "2026-10-22",
             "open": "33.20000",
             "high": "34.099998",
-            "low": "32.75500",
+            "low": "32.75",
             "close": "33.32000",
-            "volume": "4363606"
+            "volume": "4363600"
         },
         {
             "datetime": "2026-10-21",
@@ -8000,25 +8008,17 @@
             "low": "3.57000",
             "close": "3.69000",
             "volume": "1359300"
-        },
-        {
-            "datetime": "2022-10-27",
-            "open": "3.64000",
-            "high": "3.70000",
-            "low": "3.59000",
-            "close": "3.64000",
-            "volume": "1624800"
         }
     ],
     "status": "ok",
     "calculated": {
-        "current_price": 33.32,
+        "current_price": 30.99,
         "50_week_moving_average": 31.82,
-        "50_week_moving_average_slope": -29.061,
+        "50_week_moving_average_slope": -29.0808,
         "50_week_ema": 2.66,
-        "200_week_moving_average": 14.55,
-        "200_week_moving_average_slope": -17.8173,
-        "200_week_ema": 5.95,
+        "200_week_moving_average": 14.58,
+        "200_week_moving_average_slope": -17.8711,
+        "200_week_ema": 5.96,
         "fibonacci_levels": {
             "0.0%": 35.01,
             "23.6%": 27.23,
@@ -8032,18 +8032,18 @@
             "200.0%": -30.91,
             "261.8%": -51.28
         },
-        "rsi": 65.24,
+        "rsi": 67.06,
         "macd": {
-            "macd_line": 0.16,
+            "macd_line": 0.13,
             "signal_line": 0.07,
-            "histogram": 0.09
+            "histogram": 0.06
         },
         "bollinger_bands": {
-            "middle_band": 3.09,
-            "upper_band": 3.87,
+            "middle_band": 3.05,
+            "upper_band": 3.79,
             "lower_band": 2.31
         },
         "isInteresting": true,
-        "timestamp": "2026-10-23T00:08:17.189723+00:00"
+        "timestamp": "2026-10-24T00:01:45.981515+00:00"
     }
 }
